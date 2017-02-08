@@ -251,6 +251,14 @@ module.exports = [
         ]
     },
     {
+        "id": "pushwoosh-cordova-plugin.PushNotification",
+        "file": "plugins/pushwoosh-cordova-plugin/www/PushNotification.js",
+        "pluginId": "pushwoosh-cordova-plugin",
+        "clobbers": [
+            "plugins.pushNotification"
+        ]
+    },
+    {
         "id": "ionic-plugin-keyboard.keyboard",
         "file": "plugins/ionic-plugin-keyboard/www/ios/keyboard.js",
         "pluginId": "ionic-plugin-keyboard",
@@ -258,14 +266,6 @@ module.exports = [
             "cordova.plugins.Keyboard"
         ],
         "runs": true
-    },
-    {
-        "id": "pushwoosh-cordova-plugin.PushNotification",
-        "file": "plugins/pushwoosh-cordova-plugin/www/PushNotification.js",
-        "pluginId": "pushwoosh-cordova-plugin",
-        "clobbers": [
-            "plugins.pushNotification"
-        ]
     }
 ];
 module.exports.metadata = 
@@ -281,8 +281,8 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.2.1",
     "cordova-plugin-whitelist": "1.2.1",
     "de.appplant.cordova.plugin.local-notification": "0.8.4",
-    "ionic-plugin-keyboard": "2.0.1",
-    "pushwoosh-cordova-plugin": "4.2.2"
+    "pushwoosh-cordova-plugin": "4.2.2",
+    "ionic-plugin-keyboard": "2.2.1"
 };
 // BOTTOM OF METADATA
 });

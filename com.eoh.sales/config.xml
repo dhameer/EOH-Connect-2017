@@ -10,18 +10,18 @@
     <content src="index.html" />
     <access origin="*" />
     <access origin="*.pushwoosh.com" />
-	<access origin="http://eohict.co.za/Scripts/" />
+    <access origin="http://eohict.co.za/Scripts/" />
     <allow-navigation href="*" />
-	<feature name="Notification">
-    <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
-</feature>
-<feature name="Vibration">
-    <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
-</feature>
-<feature name="Notification">
-    <param name="ios-package" value="CDVNotification" />
-</feature>
-<gap:plugin name="com.ohh2ahh.plugins.appavailability" />
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
+    <gap:plugin name="com.ohh2ahh.plugins.appavailability" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
     <preference name="MediaPlaybackRequiresUserAction" value="false" />
     <preference name="AllowInlineMediaPlayback" value="true" />
@@ -29,6 +29,7 @@
     <preference name="webviewbounce" value="false" />
     <preference name="EnableViewportScale" value="true" />
     <preference name="loadUrlTimeoutValue" value="700000" />
-	<gap:plugin name="org.apache.cordova.inappbrowser" /> 
-	<gap:plugin name="de.appplant.cordova.plugin.local-notification" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
+    <plugin name="ionic-plugin-keyboard" spec="~2.2.1" />
 </widget>

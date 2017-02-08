@@ -34,10 +34,10 @@
         "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "com.ict.eoh"
         },
-        "ionic-plugin-keyboard": {
+        "pushwoosh-cordova-plugin": {
             "PACKAGE_NAME": "com.ict.eoh"
         },
-        "pushwoosh-cordova-plugin": {
+        "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ict.eoh"
         }
     },

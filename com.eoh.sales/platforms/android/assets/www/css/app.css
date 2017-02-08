@@ -54,12 +54,13 @@
     height: 100%;
     overflow: hidden;
     position: relative;
-    background: #e6e6e6;
+    background-image: url(../images/march/home_slider_bg.png);
+    background-size: cover;
     margin-top: 0px;
 }
 
 .slide {
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     left: 0;
 }
@@ -75,30 +76,31 @@
     outline: none;
     cursor: pointer;
     background: url(../images/blank.gif) no-repeat;
+    background-size: cover;
 }
 
 .arrow.prev {
-    opacity: 0.2;
-    left: 20px;
-    background-image: url(../images/paddle_prev_999.png);
+    opacity: 1;
+    left: 50px;
+    background-image: url(../images/march/left_arrow.png);
     transition: 0.2s linear all;
 }
 
 .arrow.next {
-    opacity: 0.2;
-    right: 20px;
-    background-image: url(../images/paddle_next_999.png);
+    opacity: 1;
+    right: 50px;
+    background-image: url(../images/march/right_arrow.png);
     transition: 0.2s linear all;
 }
 
 .arrow.prev:hover {
     opacity: 1;
-    background-image: url(../images/paddle_prev_fff.png);
+    background-image: url(../images/march/left_arrow.png);
 }
 
 .arrow.next:hover {
     opacity: 1;
-    background-image: url(../images/paddle_next_fff.png);
+    background-image: url(../images/march/right_arrow.png);
 }
 
 
@@ -147,6 +149,7 @@ NAV
 
 .dots{
     -webkit-padding-start: 0px !important;    
+    display: none !important;
 }
 
 .dots .dot a {
@@ -178,6 +181,39 @@ NAV
     /*margin-left: -10%;*/
 }
 
+.mainSpeaker{
+    z-index: 1;
+    width: 90%;
+}
+
+.mainSpeaker2{
+    z-index: 1;
+    width: 60%;
+}
+
+.mainSpeaker2back{
+    z-index: 1;
+    width: 90%;
+    background-color: #1e2b4d;
+}
+
+.img-text{
+    z-index: 5;
+    font-size: 10px;
+    position: absolute;
+    margin-top: -10%; 
+    color: #ffffff;
+}
+
+.img-text2{
+    z-index: 5;
+    font-size: 10px;
+    position: absolute;
+    margin-top: -10%; 
+    color: #ffffff;
+    text-align: center;
+}
+
 .lblue{
     background-color: #2666b0;
 }
@@ -188,8 +224,11 @@ NAV
 
 .slide-size{
     display: block;
-    height: 100%;
-    width: 100%;    
+    height: auto;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
 }
 
 div.tab-bar__icon.ng-scope{
@@ -202,11 +241,21 @@ div.tab-bar__icon.ng-scope{
     border-right-color: #ffffff;    
 }
 
+.no-border{
+    border-right: none !important;
+}
+
 .styled-select {
    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
    height: 29px;
    overflow: hidden;
    width: 240px;
+}
+
+.navigation-bar__right{
+   background: url(../images/march/EOH.png);
+   background-repeat: no-repeat;
+   background-size: 80%;
 }
 
 .rounded {
@@ -248,4 +297,18 @@ div.tab-bar__icon.ng-scope{
    height: 29px;
    padding: 5px; /* If you add too much padding here, the options won't show in IE */
    width: 268px;
+}
+
+.ons-icon.ons-icon.fa-home.fa.fa-lg{
+    color: #ffffff;
+}
+
+.footer{
+   background: url(../images/march/login_footer.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.text{
+    color: #070c29 !important;
 }

@@ -28,9 +28,6 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.ict.eoh"
         },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ict.eoh"
-        },
         "pushwoosh-cordova-plugin": {
             "PACKAGE_NAME": "com.ict.eoh"
         },
@@ -38,6 +35,9 @@
             "PACKAGE_NAME": "com.ict.eoh"
         },
         "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ict.eoh"
+        },
+        "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ict.eoh"
         }
     },

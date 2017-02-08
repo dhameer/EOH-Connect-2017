@@ -1147,15 +1147,40 @@ function onDeviceReady() {
    app.controller('aboutController',function($scope) {
 
         $scope.try = function() {
-        var now             = new Date().getTime(),
-            _5_sec_from_now = new Date(now + 5*1000);
+            var data = "firstName=test&lastName=test&mainEmail=test6%40test6.com&company=test%40test.com";
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
 
-        cordova.plugins.notification.local.schedule({
-            text: "Delayed Notification",
-            at: _5_sec_from_now,
-            led: "FF0000",
-            sound: null
-        }); 
+            xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                console.log(this.responseText);
+
+
+                for (var i = 0; i < this.responseText.length; i++) {
+                    this.responseText[i].post_title;   
+                    console.log(this.responseText[i].post_title);            
+                }                
+
+                // var now             = new Date().getTime(),
+                //     _5_sec_from_now = new Date(now + 5*1000);
+
+                // cordova.plugins.notification.local.schedule({
+                //     text: "Delayed Notification",
+                //     at: _5_sec_from_now,
+                //     led: "FF0000",
+                //     sound: null
+                // });                 
+            }
+            });
+
+            xhr.open("GET", "http://eohconnect.com/eoh_api/agenda?meta=");
+            xhr.setRequestHeader("content-type", "application/json");
+            xhr.setRequestHeader("insecure", "insecure=cool");
+            xhr.setRequestHeader("cache-control", "no-cache");
+            xhr.setRequestHeader("postman-token", "3d74a064-a7a8-31bd-1b99-696221ca7b9d");
+
+            xhr.send(data);            
+
         }
 
         $scope.internationalDialling = function() {
@@ -1163,11 +1188,13 @@ function onDeviceReady() {
         };       
 
         $scope.slides = [
-            {image: 'images/temp_slider.jpg', description: 'Image 00'},
-            {image: 'images/img01.jpg', description: 'Image 01'},
-            {image: 'images/img02.jpg', description: 'Image 02'},
-            {image: 'images/img03.jpg', description: 'Image 03'},
-            {image: 'images/img04.jpg', description: 'Image 04'}
+            {image: 'images/march/home_icon01.png', description: 'Image 00'},
+            {image: 'images/march/home_icon02.png', description: 'Image 01'},
+            {image: 'images/march/home_icon03.png', description: 'Image 02'},
+            {image: 'images/march/home_icon04.png', description: 'Image 03'},
+            {image: 'images/march/home_icon05.png', description: 'Image 04'},
+            {image: 'images/march/home_icon06.png', description: 'Image 05'},
+            {image: 'images/march/home_icon07.png', description: 'Image 06'}            
         ];
 
         $scope.direction = 'left';

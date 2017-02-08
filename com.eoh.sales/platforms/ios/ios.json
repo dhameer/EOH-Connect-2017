@@ -45,11 +45,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
+                            "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushNotification\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushNotification\" /></feature>",
+                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -108,10 +108,10 @@
         "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "com.ict.eoh"
         },
-        "ionic-plugin-keyboard": {
+        "pushwoosh-cordova-plugin": {
             "PACKAGE_NAME": "com.ict.eoh"
         },
-        "pushwoosh-cordova-plugin": {
+        "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ict.eoh"
         }
     },
@@ -368,6 +368,14 @@
             ]
         },
         {
+            "id": "pushwoosh-cordova-plugin.PushNotification",
+            "file": "plugins/pushwoosh-cordova-plugin/www/PushNotification.js",
+            "pluginId": "pushwoosh-cordova-plugin",
+            "clobbers": [
+                "plugins.pushNotification"
+            ]
+        },
+        {
             "id": "ionic-plugin-keyboard.keyboard",
             "file": "plugins/ionic-plugin-keyboard/www/ios/keyboard.js",
             "pluginId": "ionic-plugin-keyboard",
@@ -375,14 +383,6 @@
                 "cordova.plugins.Keyboard"
             ],
             "runs": true
-        },
-        {
-            "id": "pushwoosh-cordova-plugin.PushNotification",
-            "file": "plugins/pushwoosh-cordova-plugin/www/PushNotification.js",
-            "pluginId": "pushwoosh-cordova-plugin",
-            "clobbers": [
-                "plugins.pushNotification"
-            ]
         }
     ],
     "plugin_metadata": {
@@ -396,7 +396,7 @@
         "cordova-plugin-statusbar": "2.2.1",
         "cordova-plugin-whitelist": "1.2.1",
         "de.appplant.cordova.plugin.local-notification": "0.8.4",
-        "ionic-plugin-keyboard": "2.0.1",
-        "pushwoosh-cordova-plugin": "4.2.2"
+        "pushwoosh-cordova-plugin": "4.2.2",
+        "ionic-plugin-keyboard": "2.2.1"
     }
 }

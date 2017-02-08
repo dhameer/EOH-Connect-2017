@@ -1,59 +1,39 @@
-<ons-page ng-controller="loginCtrl" class="transparent">
-  <ons-toolbar modifier="transparent">    
-  <!--
-    <div class="left">
-      <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" style="color: white; font-size: 28px;" fixed-width="false"></ons-icon></ons-toolbar-button>
-    </div>
-    <div class="right">
-      <ons-toolbar-button class="white" ng-click="menu.setMainPage('signup.html', {closeMenu: true})" >Register</ons-toolbar-button>
-    </div>
-  -->
-  </ons-toolbar>
+<ons-page ng-controller="loginCtrl" class="transparent" sliding-menu-ignore="true">
 
   <div class="login-page">
     <div class="login-logo">
-      <img src="images/design/login-header.jpg" width="100%" alt=""/>
+      <img src="images/march/login_header.png" width="100%" alt=""/>
     </div>
-
+    <div><img src="images/march/login_connections.png" style="height: auto; width: 50%; display: block; z-index: 55; position: absolute; margin-left: 52%; margin-right: 0; margin-top: 40%">
     <div class="login-form">
+      <ons-scroller style="height: 300px; width: 100%">      
       <div class="signup-wrapper">
         <ons-row>
           <ons-col>
-            <p class="header_title">PLEASE LOGIN</p>
+            <p class="header_title">LOGIN</p>
           </ons-col>
         </ons-row>
-        <ons-row>
-          <ons-col>
+        <ons-row class="textbox-height">
+          <ons-col class="textbox-background">
             <div class="border">
-              <ons-icon icon="ion-android-contact" class="blue" fixed-width="true"></ons-icon>
-              <input type="text" class="text-input--underbar " ng-focus="fld_focus(true)" ng-blur="fld_focus(false)" id="email" ng-model="username" placeholder="Email Address" value="">
+              <ons-icon icon="ion-android-contact" class="blue login-icon" fixed-width="true"></ons-icon>
+              <input type="text" class="text-input--underbar login-text" ng-focus="fld_focus(true)" ng-blur="fld_focus(false)" id="email" ng-model="username" placeholder="Email Address" value="">
             </div>
           </ons-col>
         </ons-row>
         <br>
-        <!--<ons-row>
-          <ons-col>
-            <div class="border">
-              <ons-icon icon="ion-locked" class="blue" fixed-width="true"></ons-icon>
-              <input type="password" class="text-input--underbar " ng-focus="fld_focus(true)" ng-blur="fld_focus(false)" ng-model="password" placeholder="Password" value="">
-            </div>
-          </ons-col>
-        </ons-row>
-        <br>-->
         <ons-row>
           <ons-col>
-            <ons-button class="login-button" ng-click="login()">LOGIN</ons-button>
-            <!--<ons-button modifier="quiet" class="register" ng-click="menu.setMainPage('signup.html', {closeMenu: true})">Register</ons-button> -->
+            <ons-button class="login-button" ng-click="login()">CONTINUE</ons-button>
           </ons-col>
         </ons-row>
       </div>
+      <ons-scroller>
     </div>
-    <div>
-      <img src="images/design/bg.jpg" class="bg">
     </div>
-    <div class=" class="bottom-bar footer">
-      <img src="images/design/footer.jpg" class="footerimg">
-    </div>
+    <ons-bottom-toolbar style="text-align: center; line-height: 44px; background-image: url('images/march/login_footer.png'); background-size: cover; height: 70px">
+
+    </ons-bottom-toolbar>
   </div>
   <ons-modal var="modal">
       <ons-icon icon="ion-loading-c" spin="true"></ons-icon>

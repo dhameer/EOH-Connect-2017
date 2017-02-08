@@ -228,7 +228,7 @@ div.tab-bar__icon.ng-scope{
 	color:#fff;}
 span.toolbar-button.navigation-bar__line-height{
 	padding-left: 0 !important;
-margin-left:12px;
+margin-left:-1px;
 color: #1D2A4E;}
 span.menuname.ng-scope{
 	margin:0px 0px 0px 5px;
@@ -237,6 +237,7 @@ span.menuname.ng-scope{
   background-color: #ffffff;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
+  padding-top: 2%;
 	}
 	.about_card_buttons_r{
 		width:45%;
@@ -257,7 +258,7 @@ span.menuname.ng-scope{
 	  padding:20px;
 	  }
 .header_title{
-	  color:#007DB5;
+	  color:#070c29;
 	  font-size:24px;
 	  font-weight:bold;
 	  line-height: 25px;
@@ -310,7 +311,26 @@ div.login-form{
 	margin-left: 10px;
 }
 .border{
-	border-bottom:#007DB5 1px solid;}
+	border-bottom: none
+}
+
+.textbox-background{
+  background-color: #ffffff;
+}
+
+.textbox-height{
+  height: 60px;
+}
+
+.login-icon{
+line-height: 0.75em !important;
+vertical-align: -65% !important;
+}
+
+.login-text{
+  vertical-align: -65% !important;
+}
+
 /* Fonts */
 @font-face {
   font-family: "Playfair Display SC";
@@ -590,7 +610,7 @@ map.fullscreen {
   margin: 60px auto 0;
   top:35% !important;
   float:left;
-  
+  background-color: #9bbbca;
 }
 .login-form input[type=email],
 .login-form input[type=password] {
@@ -604,8 +624,9 @@ map.fullscreen {
   width: 40%;
   margin: 0 auto;
   border-radius: 0 !important;
-  background-color: #007DB5 !important;
+  background-color: #070c29 !important;
   line-height: 28px;
+  text-align: center;
 }
 .login-form .forgot-password {
   display: block;
@@ -635,12 +656,12 @@ map.fullscreen {
   right: 0px;
   top: 0px;
   bottom: 0px;
+  background-color: #9bbbca;
 }
 .login-page .login-logo {
   width: 100%;
   height: 140px;
   left: 0;
-  top: 20px;
   text-align: center;
   color: #fff;
   position: absolute;
@@ -650,7 +671,7 @@ map.fullscreen {
   width: 100%; 
   margin: 0 auto;
   left: 0;
-  top: 220px;
+  margin-top: 20%;
   /* color: #fff; */
   position: absolute;
   z-index: 2;

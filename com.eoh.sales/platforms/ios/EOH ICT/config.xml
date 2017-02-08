@@ -39,9 +39,6 @@
         <param name="ios-package" onload="true" value="APPLocalNotification" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="Keyboard">
-        <param name="ios-package" onload="true" value="IonicKeyboard" />
-    </feature>
     <feature name="PushNotification">
         <param name="ios-package" value="PushNotification" />
     </feature>
@@ -77,4 +74,7 @@
     <preference name="MediaPlaybackRequiresUserAction" value="false" />
     <preference name="webviewbounce" value="false" />
     <preference name="loadUrlTimeoutValue" value="700000" />
+    <feature name="Keyboard">
+        <param name="ios-package" onload="true" value="IonicKeyboard" />
+    </feature>
 </widget>

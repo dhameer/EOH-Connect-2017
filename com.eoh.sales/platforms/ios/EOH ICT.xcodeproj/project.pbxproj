@@ -35,7 +35,6 @@
 		B696BBB8D305441FBB321F16 /* APPLocalNotificationOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC19F6F2B884A1E9C85BA32 /* APPLocalNotificationOptions.m */; };
 		D443E89DD424444A8C312015 /* UIApplication+APPLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 65951B9C9B9C4FFCBE685969 /* UIApplication+APPLocalNotification.m */; };
 		6EFDE8B06CAC4E5BA4965E7F /* UILocalNotification+APPLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281249706402482CF8716 /* UILocalNotification+APPLocalNotification.m */; };
-		2669D015A21346E2BED2E1B0 /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C077E191B814957BBCEBA49 /* IonicKeyboard.m */; };
 		E83FBF4A8887468C9802E22F /* PushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6368C74E337B4BB2B46FF5A4 /* PushNotification.m */; };
 		79140FFDB75F4B518F28A34C /* Pushwoosh in Resources */ = {isa = PBXBuildFile; fileRef = B02E87C7DF5445BDB9A37A3C /* Pushwoosh */; };
 		3379EB8586B74A34A96CF70A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45EB3CB6B784CDCA56C3626 /* Security.framework */; };
@@ -43,6 +42,7 @@
 		3E12A40296314D53BFC0EF2A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF796335048F439AB28D3887 /* CoreLocation.framework */; };
 		4FBE5737FE9C4E2892046FE8 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B35A7C2C364512BBF6E48D /* libstdc++.dylib */; };
 		263356FFE3FF4E52898F646E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 68108E302DC84608ABE6C90E /* libz.dylib */; };
+		1DD9ECDEE3BF4F8AB49F6A04 /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = A354263893BD41738B1AE3C9 /* IonicKeyboard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,8 +118,6 @@
 		A44D6AE146DA44F6B86A1031 /* APPLocalNotificationOptions.h */ = {isa = PBXFileReference; name = "APPLocalNotificationOptions.h"; path = "de.appplant.cordova.plugin.local-notification/APPLocalNotificationOptions.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		87D40EC168164465BF116A56 /* UIApplication+APPLocalNotification.h */ = {isa = PBXFileReference; name = "UIApplication+APPLocalNotification.h"; path = "de.appplant.cordova.plugin.local-notification/UIApplication+APPLocalNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		3D1CF70ACEF846A29C010916 /* UILocalNotification+APPLocalNotification.h */ = {isa = PBXFileReference; name = "UILocalNotification+APPLocalNotification.h"; path = "de.appplant.cordova.plugin.local-notification/UILocalNotification+APPLocalNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		3C077E191B814957BBCEBA49 /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		2CC1CEB7D46A48DA82C1A991 /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		6368C74E337B4BB2B46FF5A4 /* PushNotification.m */ = {isa = PBXFileReference; name = "PushNotification.m"; path = "pushwoosh-cordova-plugin/ios/PushNotification.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		B02E87C7DF5445BDB9A37A3C /* Pushwoosh */ = {isa = PBXFileReference; name = "Pushwoosh"; path = "EOH ICT/Plugins/pushwoosh-cordova-plugin/Pushwoosh"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C9BED05EB74E4FD9BAD3C63F /* PushNotification.h */ = {isa = PBXFileReference; name = "PushNotification.h"; path = "pushwoosh-cordova-plugin/ios/PushNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
@@ -129,6 +127,8 @@
 		DF796335048F439AB28D3887 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		A5B35A7C2C364512BBF6E48D /* libstdc++.dylib */ = {isa = PBXFileReference; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
 		68108E302DC84608ABE6C90E /* libz.dylib */ = {isa = PBXFileReference; name = "libz.dylib"; path = "usr/lib/libz.dylib"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = compiled.mach-o.dylib; explicitFileType = undefined; includeInIndex = 0; };
+		A354263893BD41738B1AE3C9 /* IonicKeyboard.m */ = {isa = PBXFileReference; name = "IonicKeyboard.m"; path = "ionic-plugin-keyboard/IonicKeyboard.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4BB1F15BBA76425CB91D3468 /* IonicKeyboard.h */ = {isa = PBXFileReference; name = "IonicKeyboard.h"; path = "ionic-plugin-keyboard/IonicKeyboard.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,11 +282,11 @@
 				A44D6AE146DA44F6B86A1031 /* APPLocalNotificationOptions.h */,
 				87D40EC168164465BF116A56 /* UIApplication+APPLocalNotification.h */,
 				3D1CF70ACEF846A29C010916 /* UILocalNotification+APPLocalNotification.h */,
-				3C077E191B814957BBCEBA49 /* IonicKeyboard.m */,
-				2CC1CEB7D46A48DA82C1A991 /* IonicKeyboard.h */,
 				6368C74E337B4BB2B46FF5A4 /* PushNotification.m */,
 				C9BED05EB74E4FD9BAD3C63F /* PushNotification.h */,
 				D31024B2FFDF4637850EE1BC /* PushNotificationManager.h */,
+				A354263893BD41738B1AE3C9 /* IonicKeyboard.m */,
+				4BB1F15BBA76425CB91D3468 /* IonicKeyboard.h */,
 			);
 			name = Plugins;
 			path = "EOH ICT/Plugins";
@@ -415,8 +415,8 @@
 				B696BBB8D305441FBB321F16 /* APPLocalNotificationOptions.m in Sources */,
 				D443E89DD424444A8C312015 /* UIApplication+APPLocalNotification.m in Sources */,
 				6EFDE8B06CAC4E5BA4965E7F /* UILocalNotification+APPLocalNotification.m in Sources */,
-				2669D015A21346E2BED2E1B0 /* IonicKeyboard.m in Sources */,
 				E83FBF4A8887468C9802E22F /* PushNotification.m in Sources */,
+				1DD9ECDEE3BF4F8AB49F6A04 /* IonicKeyboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
