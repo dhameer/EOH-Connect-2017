@@ -1,0 +1,57 @@
+<ons-page ng-controller="fbSessionCtrl">
+    <ons-toolbar  class="NavBar" modifier="transparent">
+        <div class="left">
+            <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon><span class="menuname">Menu</span></ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div class="app-page">
+        <div class="header_title_list">Session Feedback</div>
+        <form class="feedback_form" name="feedback_form" novalidate ng-submit="submitForm()">
+
+            <input id="form" name="form" ng-model="user.form" type="hidden" value="Afternoon Learning and Development" />
+            <input id="username" name="username" ng-model="user.username" type="hidden" />
+
+            <div class="errors">
+                <div ng-show="errorfname">{{ errorfname }}</div>
+                <div ng-show="errorfbsession">{{ errorfbsession }}</div>
+                <div ng-show="errorrate">{{ errorrate }}</div>
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q" for="fname">Full Name <span class="required">*</span></label>
+                <input id="fname" name="fname" ng-model="user.fname" placeholder="Full Name" required type="text" />
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q" for="fbsession">Session: <span class="required">*</span></label>
+                <select name="fbsession" id="fbsession" ng-model="user.fbsession" required>
+                    <option value="">-- Select --</option>
+                    <option value="Business Intelligence & ERP in the Cloud - ( Neil Lund )">Business Intelligence & ERP in the Cloud - ( Neil Lund )</option>
+                    <option value="Engaged Citizens Portal for Government - ( Daniel Turtledove )">Engaged Citizens Portal for Government - ( Daniel Turtledove )</option>
+                    <option value="Account Plans in CRM 2016 - ( Ian Wilson )">Account Plans in CRM 2016 - ( Ian Wilson )</option>
+                    <option value="Leveraging the EOH Cloud for our Application BU’s - ( Richard Vester )">Leveraging the EOH Cloud for our Application BU’s - ( Richard Vester )</option>
+                    <option value="Multiple Business Unit Bids / Pricing for multiple Business Unit Bids - ( Rudi Barnard/ Rene Jonker ) ">Multiple Business Unit Bids / Pricing for multiple Business Unit Bids - ( Rudi Barnard/ Rene Jonker )</option>
+                    <option value="Single Service Aggregator Outsourcing - ( Lisa Fielder )">Single Service Aggregator Outsourcing - ( Lisa Fielder )</option>
+                    <option value="Leveraging the Field service Platform - ( Peter Winn )">Leveraging the Field service Platform - ( Peter Winn )</option>
+                    <option value="All is revealed – see your business like never before – visualised with Qlikview - ( Steven Joffe ) ">All is revealed – see your business like never before – visualised with Qlikview - ( Steven Joffe )</option>
+                    <option value="Global Application Optimisation - ( David Brown / Brett Steingo )">Global Application Optimisation - ( David Brown / Brett Steingo )</option>
+                    <option value="CA as Service ( IT Management as a Service) - ( Hannes Botes )">CA as Service ( IT Management as a Service) - ( Hannes Botes )</option>
+                    <option value="Engaging with Public Sector Sales - ( Patrick Makhubedu )">Engaging with Public Sector Sales - ( Patrick Makhubedu )</option>
+                    <option value="Value Solutions Based Selling - ( Simon Just )">Value Solutions Based Selling - ( Simon Just )</option>
+                </select>
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q" for="rate">Rate: <span class="required">*</span> <span style="float:right;">{{user.rate}}%</span></label>
+                <input name="rate" id="rate" type="range" value="0" class="range" ng-model="user.rate" />
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q" for="extra">Comments</label>
+                <textarea name="extra" id="extra" cols="30" rows="10" ng-model="user.extra"></textarea>
+            </div>
+
+            <button class="center" id="submit" type="submit"> Submit </button>
+        </form>
+    </div>
+</ons-page>

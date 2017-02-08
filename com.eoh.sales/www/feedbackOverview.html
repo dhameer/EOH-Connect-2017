@@ -1,0 +1,32 @@
+<ons-page>
+    <ons-toolbar class="NavBar" modifier="transparent">
+        <div class="left">
+            <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon><span class="menuname">Menu</span></ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div class="app-page">
+        <div class="header_title_list">Feedback</div>
+
+        <div class="about_card_buttons_l" ng-click="menu.setMainPage('feedbackOverall.html', {closeMenu: true})">
+            <img src="images/form/overall.jpg" width="90%" alt=""/>
+        </div>
+
+        <div class="header_title_list clear">Strategic Accounts</div>
+
+        <div class="about_card_buttons_l" ng-click="menu.setMainPage('feedbackSessionMS.html', {closeMenu: true})">
+            <img src="images/form/as.jpg" width="90%"  alt=""/>
+        </div>
+        <div class="about_card_buttons_r" ng-click="menu.setMainPage('feedbackSessionAS.html', {closeMenu: true})">
+            <img src="images/form/asa.jpg" width="90%"  alt=""/>
+        </div>
+
+        <div class="header_title_list clear">Learning Development</div>
+
+        <div class="about_card_buttons_l" ng-click="menu.setMainPage('feedbackSessionML.html', {closeMenu: true})">
+            <img src="images/form/Learningd.jpg" width="90%" alt=""/>
+        </div>
+        <div class="about_card_buttons_r" ng-click="menu.setMainPage('feedbackSessionAL.html', {closeMenu: true})">
+            <img src="images/form/Learningda.jpg" width="90%"  alt=""/>
+        </div>
+    </div>
+</ons-page>

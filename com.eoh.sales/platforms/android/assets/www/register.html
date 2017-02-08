@@ -1,0 +1,132 @@
+<ons-page ng-controller="registerCtrl" class="transparent">
+  <ons-toolbar modifier="transparent">    
+  <!--
+    <div class="left">
+      <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" style="color: white; font-size: 28px;" fixed-width="false"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="right">
+      <ons-toolbar-button class="white" ng-click="menu.setMainPage('signup.html', {closeMenu: true})" >Register</ons-toolbar-button>
+    </div>
+  -->
+  </ons-toolbar>
+
+  <div class="login-page">
+    <div class="login-logo">
+      <img src="images/design/login-header.jpg" width="100%" alt=""/>
+    </div>
+
+    <div class="login-form">
+      <div class="signup-wrapper">
+        <ons-row>
+          <ons-col>
+            <p class="header_title">PLEASE Register</p>
+          </ons-col>
+        </ons-row>
+        <ons-row>
+          <ons-col>
+            <div class="border">
+              <ons-icon icon="ion-android-contact" class="blue" fixed-width="true"></ons-icon>
+              <input type="text" class="text-input--underbar " ng-focus="fld_focus(true)" ng-blur="fld_focus(false)" id="firstName" placeholder="First Name" value="">
+            </div>
+          </ons-col>
+        </ons-row>
+        <br>
+        <ons-row>
+          <ons-col>
+            <div class="border">
+              <ons-icon icon="ion-android-contact" class="blue" fixed-width="true"></ons-icon>
+              <input type="text" class="text-input--underbar " ng-focus="fld_focus(true)" ng-blur="fld_focus(false)" id="lastName"placeholder="Last Name" value="">
+            </div>
+          </ons-col>
+        </ons-row>
+        <br>
+        <ons-row>
+          <ons-col>
+            <div class="border">
+              <ons-icon icon="ion-android-contact" class="blue" fixed-width="true"></ons-icon>
+              <input type="text" class="text-input--underbar " ng-focus="fld_focus(true)" ng-blur="fld_focus(false)" id="mainEmail" placeholder="Email Address" value="">
+            </div>
+          </ons-col>
+        </ons-row>
+        <br> 
+        <ons-row>
+          <ons-col>
+            <div class="border">
+              <ons-icon icon="ion-android-contact" class="blue" fixed-width="true"></ons-icon>
+              <input type="text" class="text-input--underbar " ng-focus="fld_focus(true)" ng-blur="fld_focus(false)" id="company" placeholder="Company" value="">
+            </div>
+          </ons-col>
+        </ons-row>
+        <br>
+        <ons-row>
+          <ons-col>
+            <div class="border">
+              <ons-icon icon="ion-android-contact" class="blue" fixed-width="true"></ons-icon>
+              <input type="text" class="text-input--underbar " ng-focus="fld_focus(true)" ng-blur="fld_focus(false)" id="cellnumber" placeholder="Cellphone Number" value="">
+            </div>
+          </ons-col>
+        </ons-row>
+        <ons-row>
+          <ons-col>
+            <div class="border">      
+        <select id="diet">
+            <option>Halaal</option>
+            <option>Kosher</option>
+            <option>Standard</option>
+            <option>Vegetarian</option>
+            <option>Vegan</option>
+        </select>
+            </div>
+          </ons-col>
+        </ons-row>
+        <br> 
+        <ons-row>
+          <ons-col>
+            <div class="border">        
+        <select id="track1">
+            <option>Implementing continuous delivery in the real world</option>
+            <option>Navigating a realistic transition to the cloud</option>
+            <option>Disruptive digital built-in</option>
+            <option>Leapfrog to the new data world</option>
+            <option>Driving value through IT transformation</option>
+            <option>Unified and converged communications</option>
+            <option>Taking your applications to the cloud</option>            
+        </select>        
+            </div>
+          </ons-col>
+        </ons-row>
+        <br>
+        <ons-row>
+          <ons-col>
+            <div class="border">        
+        <select id="track2">
+            <option>Implementing continuous delivery in the real world</option>
+            <option>Navigating a realistic transition to the cloud</option>
+            <option>Disruptive digital built-in</option>
+            <option>Leapfrog to the new data world</option>
+            <option>Driving value through IT transformation</option>
+            <option>Unified and converged communications</option>
+            <option>Taking your applications to the cloud</option>            
+        </select>        
+            </div>
+          </ons-col>
+        </ons-row>
+        <br>                               
+        <ons-row>
+          <ons-col>
+            <ons-button class="login-button" ng-click="register()">Register</ons-button>
+            <!--<ons-button modifier="quiet" class="register" ng-click="menu.setMainPage('signup.html', {closeMenu: true})">Register</ons-button> -->
+          </ons-col>
+        </ons-row>
+      </div>
+    </div>
+    <div>
+      <img src="images/design/bg.jpg" class="bg">
+    </div>
+    <div class=" class="bottom-bar footer">
+      <img src="images/design/footer.jpg" class="footerimg">
+    </div>
+  </div>
+
+</ons-page>
+

@@ -1,0 +1,79 @@
+<ons-page  ng-controller="signupController" class="transparent">
+  <ons-toolbar modifier="transparent">    
+ <!--   <div class="left">
+      <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" style="color: white; font-size: 28px;" fixed-width="false"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="right">
+      <ons-toolbar-button class="white" ng-click="menu.setMainPage('login.html', {closeMenu: true})" >Log In</ons-toolbar-button>
+    </div>-->
+  </ons-toolbar>
+
+  <div class="signup-page">
+    <div class="signup-logo">
+      <img src="images/design/login-header.jpg" width="100%" alt=""/>
+    </div>
+
+    <div class="signup-form">
+      <div class="signup-wrapper">
+      <ons-row>
+          <ons-col>
+ 	<p class="header_title">REGISTER</p>
+           </ons-col>
+        </ons-row>
+        <ons-row>
+          <ons-col>
+          <div class="border">
+           <ons-icon icon="ion-android-contact" class="blue" fixed-width="true"></ons-icon><input type="text" class="text-input--underbar " ng-model="username" placeholder="Username" value="" > 
+            </div>         
+              </ons-col>
+             </ons-row>
+          <ons-row>
+          <ons-col>
+          <div class="border">
+          <ons-icon icon="ion-ios-email-outline" class="blue" fixed-width="true"></ons-icon> <input type="email" class="text-input--underbar " ng-model="email" placeholder="Email" value="" >
+          </div>
+          </ons-col>
+        </ons-row>
+
+        <ons-row>
+          <ons-col>
+          <div class="border">
+ <ons-icon icon="ion-locked" class="blue" fixed-width="true"></ons-icon> <input type="password" class="text-input--underbar  " ng-model="password" placeholder="Password" value="" >
+ </div>
+     </ons-col>
+        </ons-row>
+
+        <div class="lucent">
+          <p class="note">Password - 6 characters or more</p>
+        </div>
+
+        <ons-row>
+          <ons-col>
+            <ons-button class="sign-up-button"  ng-click="register()">CREATE ACCOUNT</ons-button>
+            
+       
+          </ons-col>
+        </ons-row>
+      </div> 
+      <ons-button modifier="quiet" class="back" ng-click="menu.setMainPage('login.html', {closeMenu: true})">Back to login</ons-button>
+    </div>
+
+    <div >
+      <img src="images/design/bg.jpg" class="bg">
+    </div>
+    <div class="bottom-bar footer">
+      <img src="images/design/footer.jpg" class="footerimg">
+     </div>
+    
+  </div>
+  
+  
+  <ons-modal var="modal">
+      <ons-icon icon="ion-loading-c" spin="true"></ons-icon>
+      <br><br>
+      Please wait<br>Connecting...
+  </ons-modal>
+
+ 
+
+</ons-page>

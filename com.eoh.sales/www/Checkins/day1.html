@@ -1,0 +1,72 @@
+<ons-page>
+  <ons-toolbar  class="NavBar" modifier="transparent">
+    <div class="left">
+      <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon><span class="menuname">Menu</span></ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+
+  <div class="app-page" ng-controller="day1Controller">
+       
+<div class="header_title_list feed">Check-in</div>
+	<!--register button-->
+
+		<div id="Reg">
+    <div id="Regtext" class="header_title_list_small">Registration & Networking breakfast</div>
+        <ons-button id="Regbtn" modifier="large"  class="center check" should-spin="{{isFetching}}" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+        <div id="EOHup">
+       <div id="EOHuptext" class="header_title_list_small">EOH Update</div>
+       <ons-button id="EOHupbtn" modifier="large" class="center check" should-spin="{{isFetching}}"  ng-click="Check-in1()">Check-in</ons-button>
+      </div>
+     <div id="customerCon">
+      <div id="customerContext" class="header_title_list_small">Table - Customer Connect </div><ons-button modifier="large" class="center check"  should-spin="{{isFetching}}" id="customerConbtn" ng-click="Check-in1()">Check-in</ons-button>
+      </div>
+      <div id="valuProp">
+       <div id="valuProptext" class="header_title_list_small">EOH ICT - Value Propositions </div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="valuProptn" ng-click="Check-in1()">Check-in</ons-button>
+      </div>
+      <div id="learning1">
+       <div id="learning1text" class="header_title_list_small">Learning & Development Sessions</div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="learning1btn" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+        <div id="coffee1">
+         <div id="coffee1text" class="header_title_list_small">Coffee & tea on the way to break-aways</div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="coffee1btn" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+        <div id="guest1">
+         <div id="guest1text" class="header_title_list_small">Guest Speaker </div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="guest1btn" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+        <div id="breakOut1">
+         <div id="breakOut1text" class="header_title_list_small">Account break out session</div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="breakOut1btn" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+        
+        <div id="lunch">
+         <div  id="lunchtext" class="header_title_list_small">Lunch</div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="lunchbtn" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+        <div id="guest2">
+            <div id="guest2text" class="header_title_list_small">Guest Speaker </div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="guest2btn" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+        <div id="trends">
+         <div id="trendstext" class="header_title_list_small">Trends in Corporate Communications</div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="trendsbtn" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+        <div id="cloud">
+         <div id="cloudtext" class="header_title_list_small">Table discussion on Cloud </div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="cloudbtn" ng-click="Check-in1()">Check-in</ons-button>
+	</div>
+    <div id="breakout2">
+        <div id="breakout2text" class="header_title_list_small">Account break out session</div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="breakout2btn" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+        <div id="coffee2">
+            <div id="coffee2text" class="header_title_list_small">Coffee & tea on the way from break-aways</div><ons-button modifier="large" class="center check" id="coffee2btn" should-spin="{{isFetching}}" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+        <div id="learning2">
+         <div id="learning2text" class="header_title_list_small">Learning & Development Sessions</div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="learning2btn" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+        <div id="rene">
+         <div id="renetext" class="header_title_list_small">Rene' Carayol</div><ons-button modifier="large" class="center check" should-spin="{{isFetching}}" id="renebtn" ng-click="Check-in1()">Check-in</ons-button>
+        </div>
+       
+       <div id="thanku" class="header_title_list_small">Thank you for checking in</div>
+        
+  <ons-bottom-toolbar>
+    <div class="bottom-bar__line-height" style="text-align: center;"> </div>
+  </ons-bottom-toolbar>
+</ons-page>
+
+

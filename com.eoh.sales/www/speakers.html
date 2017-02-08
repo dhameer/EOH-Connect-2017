@@ -1,0 +1,45 @@
+<ons-navigator animation="slide" var="news">  
+  <ons-page>
+  <ons-toolbar class="NavBar" modifier="transparent">
+      <div class="left">
+        <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon><span class="menuname">Menu</span></ons-toolbar-button>
+      </div>
+      
+    </ons-toolbar>
+
+    <div class="app-page news-page latest-news" ng-controller="speakersController" data-ng-init="getAllRecords()">
+
+      <ons-list modifier="news" class="speaker">
+        <div class="header_title_list">Speakers</div>
+        <ons-list-item class="list-item-container sp" ng-repeat="item in items track by $index" ng-click="showPost($index)">
+          <ons-row>
+            <ons-col width="95px">
+              <div class="thumbnail-box is-loading" images-loaded="imgLoadedEvents">
+                <img ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.thumbnail.url }}" class="thumbnail" img-cache>
+              </div>
+            </ons-col>
+            <ons-col>
+              <div class="name sp">
+                {{ item.title | limitTo: 22 }}
+              </div>
+              <div class="location sp" ng-show="{{ item.categories }}">
+              <span>{{item.custom_fields.Time | htmlToPlaintext }} </span>
+              </div>
+              
+              <div class="desc sp">
+                {{ item.excerpt | htmlToPlaintext | limitTo: 22 }}...                
+              </div>
+            </ons-col>
+            <ons-col class="speakericon" width="40px"><ons-icon icon="ion-ios-arrow-right" fixed-width="true" class="icon_orange"></i>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+
+      </ons-list>
+
+      <ons-button id="moreButton" rel="home" class="center" should-spin="{{isFetching}}" ng-click="nextSpeakerPage()">Load more Speakers</ons-button>
+
+    </div>
+
+  </ons-page>
+</ons-navigator>

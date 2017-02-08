@@ -1,0 +1,141 @@
+<ons-page ng-controller="fbOverallCtrl">
+    <ons-toolbar  class="NavBar" modifier="transparent">
+        <div class="left">
+            <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon><span class="menuname">Menu</span></ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div class="app-page">
+        <div class="header_title_list">Overall Feedback</div>
+        <form class="feedback_form" name="feedback_form" novalidate ng-submit="submitForm()">
+
+            <input id="username" name="username" ng-model="user.username" type="hidden" />
+
+            <div class="errors">
+                <div ng-show="errorfname">{{ errorfname }}</div>
+                <div ng-show="errorbu">{{ errorbu }}</div>
+                <div ng-show="errorfbsession">{{ errorfbsession }}</div>
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q" for="fname">Full Name <span class="required">*</span></label>
+                <input id="fname" name="fname" ng-model="user.fname" placeholder="Full Name" required type="text" />
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q" for="bu">Business Unit <span class="required">*</span></label>
+                <input id="bu" name="bu" ng-model="user.bu" placeholder="Business Unit" required type="text" />
+            </div>
+            
+            <div class="fld_group">
+                <label class="fld_q" for="fbsession">Feedback for session: <span class="required">*</span></label>
+                <select name="fbsession" id="fbsession" ng-model="user.fbsession" required>
+                    <option value="">-- Select --</option>
+                    <optgroup label="Session 1 - Discovery Workshops">
+                        <option value="Bidvest - ( Simon Peter / Renee Lee )">Bidvest - ( Simon Peter / Renee Lee )</option>
+                        <option value="Europcar - ( Martin Voster )">Europcar - ( Martin Voster )</option>
+                        <option value="Wits University - ( Sergio Filipe )">Wits University - ( Sergio Filipe )</option>
+                        <option value="Kishugu - ( Craig Watson )">Kishugu - ( Craig Watson )</option>
+                        <option value="Woolworths - ( Lorraine Venter )">Woolworths - ( Lorraine Venter )</option>
+                        <option value="MacSteel - ( Bradley Smith )">MacSteel - ( Bradley Smith )</option>
+                        <option value="AMH - ( Mariette Hattingh )">AMH - ( Mariette Hattingh )</option>
+                        <option value="SARB - ( John Bainbridge )">SARB - ( John Bainbridge )</option>
+                        <option value="RCS - ( Kashiefa Benjamin )">RCS - ( Kashiefa Benjamin )</option>
+                        <option value="Tsebo - ( Adriaan Rossouw )">Tsebo - ( Adriaan Rossouw )</option>
+                        <option value="SAFCOL - ( Bernard Van Niekerk )">SAFCOL - ( Bernard Van Niekerk )</option>
+                        <option value="Shoprite - ( Carl Blake )">Shoprite - ( Carl Blake )</option>
+                    </optgroup>
+                    <optgroup label="Session 1 - Learning & Development">
+                        <option value="Business Intelligence & ERP in the Cloud - ( Neil Lund )">Business Intelligence & ERP in the Cloud - ( Neil Lund )</option>
+                        <option value="Engaged Citizens Portal for Government - ( Daniel Turtledove )">Engaged Citizens Portal for Government - ( Daniel Turtledove )</option>
+                        <option value="Account Plans in CRM 2016 - ( Ian Wilson )">Account Plans in CRM 2016 - ( Ian Wilson )</option>
+                        <option value="Leveraging the EOH Cloud for our Application BU’s - ( Richard Vester )">Leveraging the EOH Cloud for our Application BU’s - ( Richard Vester )</option>
+                        <option value="Multiple Business Unit Bids / Pricing for multiple Business Unit Bids - ( Rudi Barnard/ Rene Jonker ) ">Multiple Business Unit Bids / Pricing for multiple Business Unit Bids - ( Rudi Barnard/ Rene Jonker )</option>
+                        <option value="Single Service Aggregator Outsourcing - ( Lisa Fielder )">Single Service Aggregator Outsourcing - ( Lisa Fielder )</option>
+                        <option value="Leveraging the Field service Platform - ( Peter Winn )">Leveraging the Field service Platform - ( Peter Winn )</option>
+                        <option value="All is revealed – see your business like never before – visualised with Qlikview - ( Steven Joffe ) ">All is revealed – see your business like never before – visualised with Qlikview - ( Steven Joffe )</option>
+                        <option value="Global Application Optimisation - ( David Brown / Brett Steingo )">Global Application Optimisation - ( David Brown / Brett Steingo )</option>
+                        <option value="CA as Service ( IT Management as a Service) - ( Hannes Botes )">CA as Service ( IT Management as a Service) - ( Hannes Botes )</option>
+                        <option value="Engaging with Public Sector Sales - ( Patrick Makhubedu )">Engaging with Public Sector Sales - ( Patrick Makhubedu )</option>
+                        <option value="Value Solutions Based Selling - ( Simon Just )">Value Solutions Based Selling - ( Simon Just )</option>
+                    </optgroup>
+                    <optgroup label="Session 2 - Discovery Workshops">
+                        <option value="Nedbank - ( Nikki Prinsloo )">Nedbank - ( Nikki Prinsloo )</option>
+                        <option value="COJ / City Power - ( Nyiko Mutileni )">COJ / City Power - ( Nyiko Mutileni )</option>
+                        <option value="Tiger Brands - ( Caren Du Toit )">Tiger Brands - ( Caren Du Toit )</option>
+                        <option value="SITA - ( Patrick Makhubedu )">SITA - ( Patrick Makhubedu )</option>
+                        <option value="SAPS - ( Vincent Makoti )">SAPS - ( Vincent Makoti )</option>
+                        <option value="Spar - ( Lennie Botha )">Spar - ( Lennie Botha )</option>
+                        <option value="eThekwini Metro - ( Theo Thomas )">eThekwini Metro - ( Theo Thomas )</option>
+                        <option value="Astral - ( Corina Stefan )">Astral - ( Corina Stefan )</option>
+                        <option value="SAB/CCBA - ( Renee Lee )">SAB/CCBA - ( Renee Lee )</option>
+                        <option value="Imperial Group - ( Conroy Juta )">Imperial Group - ( Conroy Juta )</option>
+                        <option value="South 32 - ( Christoff  Botes )">South 32 - ( Christoff  Botes )</option>
+                        <option value="MTN - ( Marieke Schreuder )">MTN - ( Marieke Schreuder )</option>
+                        <option value="Netcare - ( Stephen Bird )">Netcare - ( Stephen Bird )</option>
+                    </optgroup>
+                    <optgroup label="Session 2 - Learning & Development">
+                        <option value="Business Intelligence & ERP in the Cloud - ( Neil Lund )">Business Intelligence & ERP in the Cloud - ( Neil Lund )</option>
+                        <option value="Engaged Citizens Portal for Government - ( Daniel Turtledove )">Engaged Citizens Portal for Government - ( Daniel Turtledove )</option>
+                        <option value="Account Plans in CRM 2016 - ( Ian Wilson )">Account Plans in CRM 2016 - ( Ian Wilson )</option>
+                        <option value="Leveraging the EOH Cloud for our Application BU’s - ( Richard Vester )">Leveraging the EOH Cloud for our Application BU’s - ( Richard Vester )</option>
+                        <option value="Multiple Business Unit Bids / Pricing for multiple Business Unit Bids - ( Rudi Barnard/ Rene Jonker ) ">Multiple Business Unit Bids / Pricing for multiple Business Unit Bids - ( Rudi Barnard/ Rene Jonker )</option>
+                        <option value="Single Service Aggregator Outsourcing - ( Lisa Fielder )">Single Service Aggregator Outsourcing - ( Lisa Fielder )</option>
+                        <option value="Leveraging the Field service Platform - ( Peter Winn )">Leveraging the Field service Platform - ( Peter Winn )</option>
+                        <option value="All is revealed – see your business like never before – visualised with Qlikview - ( Steven Joffe ) ">All is revealed – see your business like never before – visualised with Qlikview - ( Steven Joffe )</option>
+                        <option value="Global Application Optimisation - ( David Brown / Brett Steingo )">Global Application Optimisation - ( David Brown / Brett Steingo )</option>
+                        <option value="CA as Service ( IT Management as a Service) - ( Hannes Botes )">CA as Service ( IT Management as a Service) - ( Hannes Botes )</option>
+                        <option value="Engaging with Public Sector Sales - ( Patrick Makhubedu )">Engaging with Public Sector Sales - ( Patrick Makhubedu )</option>
+                        <option value="Value Solutions Based Selling - ( Simon Just )">Value Solutions Based Selling - ( Simon Just )</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q">Please rate the presenter</label>
+                <div><input type="radio" name="rp" id="rpA" value="A" ng-model="user.rp"><label for="rpA">Excellent</label></div>
+                <div><input type="radio" name="rp" id="rpB" value="B" ng-model="user.rp"><label for="rpB">Good</label></div>
+                <div><input type="radio" name="rp" id="rpC" value="C" ng-model="user.rp"><label for="rpC">Average</label></div>
+                <div><input type="radio" name="rp" id="rpD" value="D" ng-model="user.rp"><label for="rpD">Bad</label></div>
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q">Please rate the workshop</label>
+                <div><input type="radio" name="rw" id="rwA" value="A" ng-model="user.rw"><label for="rwA">Excellent</label>
+                <div><input type="radio" name="rw" id="rwB" value="B" ng-model="user.rw"><label for="rwB">Good</label></div>
+                <div><input type="radio" name="rw" id="rwC" value="C" ng-model="user.rw"><label for="rwC">Average</label></div>
+                <div><input type="radio" name="rw" id="rwD" value="D" ng-model="user.rw"><label for="rwD">Bad</label></div>
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q">Overall content of the ICT Sales & Leadership Conference</label>
+                <div><input type="radio" name="oc" id="ocA" value="A" ng-model="user.oc"><label for="ocA">Excellent</label></div>
+                <div><input type="radio" name="oc" id="ocB" value="B" ng-model="user.oc"><label for="ocB">Good</label></div>
+                <div><input type="radio" name="oc" id="ocC" value="C" ng-model="user.oc"><label for="ocC">Average</label></div>
+                <div><input type="radio" name="oc" id="ocD" value="D" ng-model="user.oc"><label for="ocD">Bad</label></div>
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q">Guest speakers invited to the ICT Sales & Leadership Conference</label>
+                <div><input type="radio" name="gs" id="gsA" value="A" ng-model="user.gs"><label for="gsA">Excellent</label></div>
+                <div><input type="radio" name="gs" id="gsB" value="B" ng-model="user.gs"><label for="gsB">Good</label></div>
+                <div><input type="radio" name="gs" id="gsC" value="C" ng-model="user.gs"><label for="gsC">Average</label></div>
+                <div><input type="radio" name="gs" id="gsD" value="D" ng-model="user.gs"><label for="gsD">Bad</label></div>
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q">How would you rate the venue of the event</label>
+                <div><input type="radio" name="rate" id="rateA" value="A" ng-model="user.rate"><label for="rateA">Excellent</label></div>
+                <div><input type="radio" name="rate" id="rateB" value="B" ng-model="user.rate"><label for="rateB">Good</label></div>
+                <div><input type="radio" name="rate" id="rateC" value="C" ng-model="user.rate"><label for="rateC">Average</label></div>
+                <div><input type="radio" name="rate" id="rateD" value="D" ng-model="user.rate"><label for="rateD">Bad</label></div>
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q" for="extra">Is there anything else you would like to share about the event</label>
+                <textarea name="extra" id="extra" cols="30" rows="10" ng-model="user.extra"></textarea>
+            </div>
+
+            <button class="center" id="submit" type="submit"> Submit </button>
+        </form>
+    </div>
+</ons-page>

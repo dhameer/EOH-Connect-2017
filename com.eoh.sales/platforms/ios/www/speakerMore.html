@@ -1,0 +1,26 @@
+
+<ons-page ng-controller="SpostController">
+<ons-toolbar class="NavBar" modifier="transparent">
+      <div class="left">
+        <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon><span class="menuname">Menu</span></ons-toolbar-button>
+      </div>
+      
+    </ons-toolbar>
+    <div class="app-page news-page latest-news">
+    <p>&nbsp;</p>
+    <div class="header_title_list" ng-click="tabbar.loadPage('speakers.html');">
+      <a href="#" ng-click="menu.setMainPage('speakers.html', {closeMenu: true})"><img src="images/design/back.jpg" width="10%" alt=""/> Speakers  </a></div>
+     <div class="thumbnail-box is-loading " images-loaded="imgLoadedEvents">
+          <img class="det" ng-show="{{ item.thumbnail_images }}" ng-src="{{ item.thumbnail_images.thumbnail.url }}" class="thumbnail" img-cache>
+         
+    </div> 
+    <div class="detailname">{{ item.title | limitTo: 20}}</div>
+          <div class="location det" ng-show="{{ item.categories }}">
+              <span>{{item.custom_fields.Time | htmlToPlaintext }} </span>
+       </div>
+      <div ng-bind-html="renderHtml(item.content)" class="det"></div>
+  </div>
+ <div class="bottom-bar footer">
+      <img src="images/design/footer.jpg" class="footerimg">
+     </div>
+</ons-page>

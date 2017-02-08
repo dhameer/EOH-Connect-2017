@@ -1,0 +1,57 @@
+<ons-page ng-controller="fbSessionCtrl">
+    <ons-toolbar  class="NavBar" modifier="transparent">
+        <div class="left">
+            <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon><span class="menuname">Menu</span></ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div class="app-page">
+        <div class="header_title_list">Session Feedback</div>
+        <form class="feedback_form" name="feedback_form" novalidate ng-submit="submitForm()">
+
+            <input id="form" name="form" ng-model="user.form" type="hidden" value="Morning Account Strategy" />
+            <input id="username" name="username" ng-model="user.username" type="hidden" />
+
+            <div class="errors">
+                <div ng-show="errorfname">{{ errorfname }}</div>
+                <div ng-show="errorfbsession">{{ errorfbsession }}</div>
+                <div ng-show="errorrate">{{ errorrate }}</div>
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q" for="fname">Full Name <span class="required">*</span></label>
+                <input id="fname" name="fname" ng-model="user.fname" placeholder="Full Name" required type="text" />
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q" for="fbsession">Session: <span class="required">*</span></label>
+                <select name="fbsession" id="fbsession" ng-model="user.fbsession" required>
+                    <option value="">-- Select --</option>
+                    <option value="Bidvest - ( Simon Peter / Renee Lee )">Bidvest - ( Simon Peter / Renee Lee )</option>
+                    <option value="Europcar - ( Martin Voster )">Europcar - ( Martin Voster )</option>
+                    <option value="Wits University - ( Sergio Filipe )">Wits University - ( Sergio Filipe )</option>
+                    <option value="Kishugu - ( Craig Watson )">Kishugu - ( Craig Watson )</option>
+                    <option value="Woolworths - ( Lorraine Venter )">Woolworths - ( Lorraine Venter )</option>
+                    <option value="MacSteel - ( Bradley Smith )">MacSteel - ( Bradley Smith )</option>
+                    <option value="AMH - ( Mariette Hattingh )">AMH - ( Mariette Hattingh )</option>
+                    <option value="SARB - ( John Bainbridge )">SARB - ( John Bainbridge )</option>
+                    <option value="RCS - ( Kashiefa Benjamin )">RCS - ( Kashiefa Benjamin )</option>
+                    <option value="Tsebo - ( Adriaan Rossouw )">Tsebo - ( Adriaan Rossouw )</option>
+                    <option value="SAFCOL - ( Bernard Van Niekerk )">SAFCOL - ( Bernard Van Niekerk )</option>
+                    <option value="Shoprite - ( Carl Blake )">Shoprite - ( Carl Blake )</option>
+                </select>
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q" for="rate">Rate: <span class="required">*</span> <span style="float:right;">{{user.rate}}%</span></label>
+                <input name="rate" id="rate" type="range" value="0" class="range" ng-model="user.rate" />
+            </div>
+
+            <div class="fld_group">
+                <label class="fld_q" for="extra">Comments</label>
+                <textarea name="extra" id="extra" cols="30" rows="10" ng-model="user.extra"></textarea>
+            </div>
+
+            <button class="center" id="submit" type="submit"> Submit </button>
+        </form>
+    </div>
+</ons-page>

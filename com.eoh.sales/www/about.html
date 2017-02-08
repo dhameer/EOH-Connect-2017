@@ -1,0 +1,41 @@
+<ons-page>
+  <ons-toolbar  class="NavBar" modifier="transparent">
+    <div class="left">
+      <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" fixed-width="false"></ons-icon><span class="menuname">Menu</span></ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+
+  <div class="app-page white-page">
+       
+    
+<div class="about-card" ng-controller="aboutController">   
+<img src="images/temp_ban.jpg" width="100%" style="margin-bottom: -10px!important; margin-top: 14%;">
+<div class="about_card_bg">
+<div class="container slider">
+    <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage slide-size"
+         ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+         ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+
+    <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
+    <a class="arrow next" href="#" ng-click="prevSlide()"></a>
+    <nav class="nav">
+        <div class="wrapper">
+            <ul class="dots">
+                <li class="dot" ng-repeat="slide in slides">
+                    <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
+                       ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+</div>
+    <div class="about_card_buttons_r">
+      <a href="#" ng-click="menu.setMainPage('speakers.html', {closeMenu: true})"><img src="http://eohict.co.za/Scripts/about_button2.jpg" width="90%" height="100px" alt=""/></a></div>
+      <div class="about_card_buttons_l"> <a href="#" ng-click="try()"><img src="images/rc_09.jpg" width="90%" height="100px"  alt=""/></a></div>
+</div>
+  </div>
+
+
+
+</ons-page>
+

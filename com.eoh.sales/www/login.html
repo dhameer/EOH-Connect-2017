@@ -1,0 +1,65 @@
+<ons-page ng-controller="loginCtrl" class="transparent">
+  <ons-toolbar modifier="transparent">    
+  <!--
+    <div class="left">
+      <ons-toolbar-button ng-click="menu.toggle()"><ons-icon icon="ion-navicon-round" style="color: white; font-size: 28px;" fixed-width="false"></ons-icon></ons-toolbar-button>
+    </div>
+    <div class="right">
+      <ons-toolbar-button class="white" ng-click="menu.setMainPage('signup.html', {closeMenu: true})" >Register</ons-toolbar-button>
+    </div>
+  -->
+  </ons-toolbar>
+
+  <div class="login-page">
+    <div class="login-logo">
+      <img src="images/design/login-header.jpg" width="100%" alt=""/>
+    </div>
+
+    <div class="login-form">
+      <div class="signup-wrapper">
+        <ons-row>
+          <ons-col>
+            <p class="header_title">PLEASE LOGIN</p>
+          </ons-col>
+        </ons-row>
+        <ons-row>
+          <ons-col>
+            <div class="border">
+              <ons-icon icon="ion-android-contact" class="blue" fixed-width="true"></ons-icon>
+              <input type="text" class="text-input--underbar " ng-focus="fld_focus(true)" ng-blur="fld_focus(false)" id="email" ng-model="username" placeholder="Email Address" value="">
+            </div>
+          </ons-col>
+        </ons-row>
+        <br>
+        <!--<ons-row>
+          <ons-col>
+            <div class="border">
+              <ons-icon icon="ion-locked" class="blue" fixed-width="true"></ons-icon>
+              <input type="password" class="text-input--underbar " ng-focus="fld_focus(true)" ng-blur="fld_focus(false)" ng-model="password" placeholder="Password" value="">
+            </div>
+          </ons-col>
+        </ons-row>
+        <br>-->
+        <ons-row>
+          <ons-col>
+            <ons-button class="login-button" ng-click="login()">LOGIN</ons-button>
+            <!--<ons-button modifier="quiet" class="register" ng-click="menu.setMainPage('signup.html', {closeMenu: true})">Register</ons-button> -->
+          </ons-col>
+        </ons-row>
+      </div>
+    </div>
+    <div>
+      <img src="images/design/bg.jpg" class="bg">
+    </div>
+    <div class=" class="bottom-bar footer">
+      <img src="images/design/footer.jpg" class="footerimg">
+    </div>
+  </div>
+  <ons-modal var="modal">
+      <ons-icon icon="ion-loading-c" spin="true"></ons-icon>
+      <br><br>
+      Please wait<br>Connecting...
+  </ons-modal>
+
+</ons-page>
+
