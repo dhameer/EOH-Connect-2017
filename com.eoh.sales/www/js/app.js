@@ -1148,75 +1148,112 @@ function onDeviceReady() {
 
 ons.ready(function(){
         var lsEmail = localStorage.getItem("email");
+        console.log(lsEmail);
         var track1;
         var track2;
-        var data = "firstName=test&lastName=test&mainEmail=test6%40test6.com&company=test%40test.com";
+        var base;
 
+        var data = "firstName=test&lastName=test&mainEmail=test6%40test6.com&company=test%40test.com";
         var xhr = new XMLHttpRequest();
         xhr.withCredentials = true;
-
         xhr.addEventListener("readystatechange", function () {
         if (this.readyState === 4) {
-            console.log(this.responseText); 
-            track1 = this.responseText.PreferredTrack1;
-            track2 = this.responseText.PreferredTrack2;
-            console.log(track1);
-            console.log(track2);
+            // console.log(this.responseText); 
+            base = JSON.parse(this.responseText);
+            track1 = base.PreferredTrack1;
+            track2 = base.PreferredTrack2;
+            localStorage.setItem("track1push", track1);
+            localStorage.setItem("track2push", track2);
         }
         });
-
         xhr.open("GET", "http://eohconnect.com/eoh_api/contact/"+lsEmail);
         xhr.setRequestHeader("content-type", "application/json");
         xhr.setRequestHeader("insecure", "insecure=cool");
         xhr.setRequestHeader("cache-control", "no-cache");
         xhr.setRequestHeader("postman-token", "fff5288c-33be-41e2-f1e2-6116f3735f2f");
-
         xhr.send(data);
+
+
+        // if(localStorage.getItem('track1push') == "Implementing continuous delivery in the real world"){
+        //     var now             = new Date().getTime(),
+        //     push = new Date(now + 5*1000);
+        //     cordova.plugins.notification.local.schedule({
+        //         text: "Implementing continuous delivery in the real world",
+        //         at: push,
+        //         led: "FF0000",
+        //         sound: null
+        //     });         
+        // }    
+        // if(track2 == "Registration and Breakfast, Expo"){
+        //     var now             = new Date().getTime(),
+        //     push = new Date(now + 5*1000);
+
+        //     cordova.plugins.notification.local.schedule({
+        //         text: "Registration and Breakfast, Expo",
+        //         at: push,
+        //         led: "FF0000",
+        //         sound: null
+        //     });         
+        // }                
+
+
+
+            var data = "firstName=test&lastName=test&mainEmail=test6%40test6.com&company=test%40test.com";
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+
+            xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                // console.log(this.responseText);
+
+                var text = JSON.parse(this.responseText);
+                // console.log(text);
+                var time;
+                var time2
+                for (var i = 0; i < text.length; i++) {
+                    time = text[i].meta;
+                    console.log(time);
+
+                
+                for (var j = 0; j < time.length; j++) {
+                    time2 = time[0].meta_value;
+                    console.log(time2);
+                }   
+                    
+
+                }
+
+
+                        var ts = "2017-02-08T18:40:00.000000";
+                        var unix_seconds = (new Date(ts)) /1000;
+                        console.log(unix_seconds);
+
+                        var now             = new Date().getTime(),
+                        
+                            push = new Date(unix_seconds + 5*1000);
+
+                        cordova.plugins.notification.local.schedule({
+                            text: "Registration and Breakfast, Expo",
+                            at: push,
+                            led: "FF0000",
+                            sound: null
+                        });                  
+console.log(now);
+var date = new Date(now);
+console.log(date);
+            }
+            });
+
+            xhr.open("GET", "http://eohconnect.com/eoh_api/agenda?meta=");
+            xhr.setRequestHeader("content-type", "application/json");
+            xhr.setRequestHeader("insecure", "insecure=cool");
+            xhr.setRequestHeader("cache-control", "no-cache");
+            xhr.setRequestHeader("postman-token", "3d74a064-a7a8-31bd-1b99-696221ca7b9d");
+
+            xhr.send(data);
 
 });
 
-        // $scope.try = function() {
-        //     var data = "firstName=test&lastName=test&mainEmail=test6%40test6.com&company=test%40test.com";
-        //     var xhr = new XMLHttpRequest();
-        //     xhr.withCredentials = true;
-
-        //     xhr.addEventListener("readystatechange", function () {
-        //     if (this.readyState === 4) {
-        //         // console.log(this.responseText);
-
-        //         var text = JSON.parse(this.responseText);
-        //         // console.log(text);
-        //         var title;
-        //         for (var i = 0; i < text.length; i++) {
-        //             title = text[i].post_title;
-        //             console.log(title);
-
-        //             if(title == "Registration and Breakfast, Expo"){
-        //                 var now             = new Date().getTime(),
-        //                     push = new Date(now + 5*1000);
-
-        //                 cordova.plugins.notification.local.schedule({
-        //                     text: "Registration and Breakfast, Expo",
-        //                     at: push,
-        //                     led: "FF0000",
-        //                     sound: null
-        //                 });         
-        //             }
-
-        //         }                
-
-        //     }
-        //     });
-
-        //     xhr.open("GET", "http://eohconnect.com/eoh_api/agenda?meta=");
-        //     xhr.setRequestHeader("content-type", "application/json");
-        //     xhr.setRequestHeader("insecure", "insecure=cool");
-        //     xhr.setRequestHeader("cache-control", "no-cache");
-        //     xhr.setRequestHeader("postman-token", "3d74a064-a7a8-31bd-1b99-696221ca7b9d");
-
-        //     xhr.send(data);            
-
-        // }
 
         $scope.internationalDialling = function() {
             var ref = window.open('http://eohict.co.za/bu-info/', '_blank', 'location=yes');
